@@ -3,20 +3,35 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - jupyterlab==3.5.0
-  - nodejs==15.14.0
-  - yarn
-  - pip
+  - jupyterlab~=3.5.0
+  - nodejs~=15.14.0
+  - yarn~=1.22.19
+  - pip~=22.3.1
   - pip:
-    - jupyterlab-github
-    - jupyter-videochat
-    - ggshield
-    - matplotlib
-    - folium
-    - cartopy
-    - icoscp
-    - pangaeapy
-    - nbgitpuller
-    - jupyterlab-lsp
-    - python-lsp-server[all]
-    - pre-commit
+    - setuptools_rust~=1.1.2
+    - pyflakes~=2.4.0
+    - colorhash~=1.0.4
+    - requests~=2.27.0
+    - tinydb~=4.6.1
+    - PyGithub~=1.55
+    - tornado~=6.1
+    - notebook~=6.5.2
+    - PyYAML~=6.0
+    - nbformat~=5.7.0
+    - autopep8~=1.6.0
+    - Jinja2~=3.0.3
+    - setuptools~=65.3.0
+    - distro~=1.7.0
+    - wheel~=0.37.1
+    - jupyterlab-github~=3.0.1
+    - jupyter-videochat~=0.6.0
+    - ggshield~=1.14.1
+    - matplotlib~=3.6.2
+    - folium~=0.14.0
+    - cartopy~=0.21.1
+    - icoscp~=0.1.17 
+    - pangaeapy~=1.0.10 
+    - nbgitpuller~=1.1.1 
+    - jupyterlab-lsp~=3.10.2 
+    - python-lsp-server[all]~=1.6.0
+    - pre-commit~=2.20.0
