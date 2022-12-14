@@ -1,7 +1,7 @@
 
 FROM qcdis/miniconda3-pdal
 
-COPY laserfarm-environment.yaml .
+COPY environment.yml .
 RUN conda env update -f environment.yml
 
 RUN conda-pack -n venv -o /tmp/env.tar && \
