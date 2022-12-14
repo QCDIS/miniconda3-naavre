@@ -1,0 +1,22 @@
+name: venv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab==3.5.0
+  - nodejs==15.14.0
+  - yarn
+  - pip
+  - pip:
+    - jupyterlab-github
+    - jupyter-videochat
+    - ggshield
+    - matplotlib
+    - folium
+    - cartopy
+    - icoscp
+    - pangaeapy
+    - nbgitpuller
+    - jupyterlab-lsp
+    - python-lsp-server[all]
+    - pre-commit
