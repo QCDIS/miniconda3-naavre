@@ -19,7 +19,6 @@ dependencies:
     - nbformat>=5.7.0
     - autopep8>=1.6.0
     - Jinja2>=3.0.3
-    - setuptools>=63.1.0
     - distro>=1.7.0
     - jupyterlab-github>=3.0.1
     - jupyter-videochat>=0.6.0
