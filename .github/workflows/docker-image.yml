@@ -24,7 +24,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Push image to container Registry
-      if: ${{ inputs.push }}
       run: |
         docker build . --file Dockerfile -t $TAG
         # Change all uppercase to lowercase
