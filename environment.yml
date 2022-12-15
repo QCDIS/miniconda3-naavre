@@ -20,5 +20,12 @@ dependencies:
   - requests
   - colorhash
   - pyflakes
-    
-    
+  - jupyter-videochat
+  - jupyterlab-github
+  - nbgitpuller
+  - jupyterlab-lsp
+  - pre-commit
+  - python-lsp-server[all]
+  - pip
+  - pip:
+    - ggshield
