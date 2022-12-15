@@ -17,15 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      run: |
-        VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-        echo $VERSION
       
     - uses: whoan/docker-build-with-cache-action@v5
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         image_name: qcdis:miniconda3-naavre
-        image_tag: $VERSION,latest
+        image_tag: $(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,'),latest
         push_git_tag: true
     
