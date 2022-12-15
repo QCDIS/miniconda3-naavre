@@ -17,14 +17,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Extract version from tag
-      uses: damienaicheh/extract-version-from-tag-action@v1.0.0
+      run: |
+        VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+        echo $VERSION
       
     - uses: whoan/docker-build-with-cache-action@v5
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         image_name: qcdis:miniconda3-naavre
-        image_tag: $MAJOR.$MINOR,latest
+        image_tag: ,latest
         push_git_tag: true
     
