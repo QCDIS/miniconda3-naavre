@@ -16,12 +16,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3        
+    - uses: actions/checkout@v3
+    - name: Extract version from tag
+      uses: damienaicheh/extract-version-from-tag-action@v1.0.0
+      
     - uses: whoan/docker-build-with-cache-action@v5
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         image_name: qcdis:miniconda3-naavre
-        image_tag: ${{ github.ref }},latest
+        image_tag: $MAJOR.$MINOR,latest
         push_git_tag: true
     
