@@ -27,6 +27,7 @@ dependencies:
   - pre-commit
   - python-lsp-server[all]
   - nb_conda_kernels
+  - rclone
   - pip
   - pip:
     - ggshield
