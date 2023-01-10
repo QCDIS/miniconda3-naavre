@@ -29,7 +29,7 @@ dependencies:
   - nb_conda_kernels
   - rclone
   - git
-  - ma
+  - mamba
   - pip
   - pip:
     - ggshield
