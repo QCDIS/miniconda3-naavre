@@ -29,6 +29,7 @@ dependencies:
   - nb_conda_kernels
   - rclone
   - git
+  - pygithub
   - mamba
   - pip
   - pip:
