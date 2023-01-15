@@ -1,6 +1,8 @@
 FROM continuumio/miniconda3 AS build
-RUN conda install -c conda-forge mamba conda-merge conda-pack
 COPY environment.yml .
-RUN mamba env create -f environment.yml
-
-RUN conda list
+RUN conda env create -f environment.yml
+SHELL ["conda", "run", "-n", "venv", "/bin/bash", "-c"]
+RUN echo "conda activate venv" >> ~/.bashrc
+SHELL ["/bin/bash", "--login", "-c"]
+RUN jupyter serverextension enable --py jupyter_videochat --user
+RUN jupyter serverextension enable --py jupyterlab_github --user
