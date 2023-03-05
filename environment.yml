@@ -1,33 +1,34 @@
 name: venv
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - jupyterlab=3.6.1
   - nodejs=18.13.0
   - python>=3.8
-  - yarn==1.22.19
+  - yarn=1.22.19
   - tinydb>=4.6.1
   - pygithub>=1.55
   - tornado>=6.1
   - notebook=6.5.2
   - pyyaml>=6.0
-  - nbformat=5.7.3
-  - autopep8=1.6.0
-  - Jinja2=3.1.2
-  - distro=1.8.0
-  - requests=2.28.2
-  - colorhash=1.0.4
-  - pip
-  - pyflakes=3.0.1
-  - jupyter-videochat=0.6.0
-  - jupyterlab-github=3.0.1
-  - nbgitpuller=1.1.1
-  - jupyterlab-lsp=3.10.2
+  - nbformat
+  - autopep8
+  - Jinja2
+  - distro
+  - requests
+  - colorhash
+  - pyflakes
+  - jupyter-videochat
+  - jupyterlab-github
+  - nbgitpuller
+  - jupyterlab-lsp
   - python-lsp-server[all]
-  - nb_conda_kernels=2.3.1
-  - rclone=1.61.1
+  - nb_conda_kernels
+  - rclone
   - git
   - mamba
+  - pip
   - pip:
-    - ggshield
-    - pre-commit
+      - pre-commit
+      - ggshield
