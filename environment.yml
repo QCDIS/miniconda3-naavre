@@ -11,7 +11,7 @@ dependencies:
   - pygithub>=1.55
   - tornado>=6.1
   - notebook=6.5.2
-  - pyyaml>=6.0
+  - pyyaml
   - nbformat
   - autopep8
   - Jinja2
