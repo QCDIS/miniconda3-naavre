@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3 AS build
-COPY environment.yml .
+RUN wget https://raw.githubusercontent.com/QCDIS/NaaVRE/main/environment.yml 
 RUN conda env create -f environment.yml
 SHELL ["conda", "run", "-n", "venv", "/bin/bash", "-c"]
 RUN echo "conda activate venv" >> ~/.bashrc
